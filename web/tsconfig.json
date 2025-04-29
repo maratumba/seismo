@@ -1,0 +1,8 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "./src", // Add or modify this line
+    "outDir": "./dist" // You might also want to specify an outDir for the compiled files
+  },
+  "include": ["src/**/*"] // Ensure this includes your source files
+}

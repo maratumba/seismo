@@ -1,0 +1,70 @@
+{
+  "name": "@seismo/core",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "directories": {
+    "dist": "dist"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --build",
+    "clean": "rm -rf dist"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "private": false,
+  "description": "This is the package for the core library of Seismo, a JavaScript library for seismic data processing and visualization. It provides utilities for handling seismic data, including FDSN web services, waveform processing, and event handling. The library is designed to be used in both Node.js and browser environments, making it versatile for various applications in seismology and geophysics.",
+  "dependencies": {
+    "luxon": "^3.0.1",
+    "oregondsp": "^1.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "@types/luxon": "^3.0.0",
+    "typescript": "^5.8.3"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "dist/*"
+      ]
+    }
+  },
+  "exports": {
+    "./utils": {
+      "types": "./dist/utils.d.ts",
+      "require": "./dist/utils.js",
+      "import": "./dist/utils.js"
+    },
+    "./fdsn/*": {
+      "types": "./dist/fdsn/*.d.ts",
+      "require": "./dist/fdsn/*.js",
+      "import": "./dist/fdsn/*.js"
+    },
+    "./processing/*": {
+      "types": "./dist/processing/*.d.ts",
+      "require": "./dist/processing/*.js",
+      "import": "./dist/processing/*.js"
+    },
+    "./stations/*": {
+      "types": "./dist/stations/*.d.ts",
+      "require": "./dist/stations/*.js",
+      "import": "./dist/stations/*.js"
+    },
+    "./events/*": {
+      "types": "./dist/events/*.d.ts",
+      "require": "./dist/events/*.js",
+      "import": "./dist/events/*.js"
+    },
+    "./waveform/*": {
+      "types": "./dist/waveform/*.d.ts",
+      "require": "./dist/waveform/*.js",
+      "import": "./dist/waveform/*.js"
+    }
+  }
+}
