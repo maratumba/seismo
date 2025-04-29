@@ -653,7 +653,7 @@ export function getFetch(): (
 ) => Promise<Response> {
     if (default_fetch != null) {
         return default_fetch;
-    } else if (window != null) {
+    } else if (typeof window !== 'undefined' && window != null) {
         return window.fetch;
     } else if (global != null) {
         return global.fetch;
