@@ -1,6 +1,6 @@
 {
   "name": "seismo",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
   "types": "dist/index.d.ts",
   "workspaces": [
@@ -9,12 +9,26 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc --build --verbose"
+    "build": "tsc --build --verbose",
+    "publish-core": "npm publish --workspace=core --access=public",
+    "publish-web": "npm publish --workspace=web --access=public",
+    "publish": "npm run publish-core && npm run publish-web",
+    "clean": "rm -rf dist && rm -rf core/dist && rm -rf web/dist",
+    "lint": "eslint . --ext .ts,.js",
+    "lint-fix": "eslint . --ext .ts,.js --fix"
   },
-  "private": true,
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "private": false,
+  "keywords": ["seismology", "geophysics", "earthquake", "seismic", "data", "visualization"],
+  "author": "Yaman Ozakin https://gulyamani.com",
+  "homepage": "https://github.com/maratumba/seismo",
+  "bugs": {
+    "url": "https://github.com/maratumba/seismo/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maratumba/seismo.git"
+  },
+  "license": "MIT",
   "description": "",
   "devDependencies": {
     "@types/node": "^22.15.3",

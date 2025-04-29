@@ -1,6 +1,6 @@
 {
   "name": "@seismo/web",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "directories": {
@@ -14,9 +14,17 @@
   "files": [
     "dist"
   ],
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["seismology", "geophysics", "earthquake", "seismic", "data", "visualization"],
+  "author": "Yaman Ozakin https://gulyamani.com",
+  "homepage": "https://github.com/maratumba/seismo",
+  "bugs": {
+    "url": "https://github.com/maratumba/seismo/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maratumba/seismo.git"
+  },
+  "license": "MIT",
   "private": false,
   "description": "",
   "dependencies": {
